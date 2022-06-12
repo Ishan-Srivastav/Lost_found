@@ -1,6 +1,6 @@
 # Lost_found
 
-Lost and Found project for lambda
+Lost and Found Website project 
 Contributors:
 Ishan
 Suryansh
