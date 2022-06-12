@@ -21,9 +21,7 @@
     left: 0px;
     right: 0px;
     background-color: lightcoral;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(228, 228, 228);
+    justify-content: center;
 }
 
 .left-menu{
@@ -33,6 +31,7 @@
     padding-top: 10px;
     padding-left: 50px;
     display: flex;
+    margin-right: 100px;
 }
 
 .right-menu{
