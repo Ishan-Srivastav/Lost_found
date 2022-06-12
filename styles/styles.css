@@ -21,7 +21,7 @@
     left: 0px;
     right: 0px;
     background-color: lightcoral;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .left-menu{
