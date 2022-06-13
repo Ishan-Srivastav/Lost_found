@@ -1,44 +1,45 @@
-.title{
-    width: fit-content;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    background-color: lightblue;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.header {
-    height: 55px; 
+.Logo-part{
     display: flex;
-    flex-direction: row;
+    position: relative;
     justify-content: space-between;
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    right: 0px;
-    background-color: lightcoral;
-    justify-content: space-around;
+}
+.IITH-logo{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
+.page-logo{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin-top: 0;
+    height: 100px;
 }
 
-.left-menu{
-    text-align: center;
-    font-size: 30px;
-    color: yellow;
-    padding-top: 10px;
-    padding-left: 50px;
-    display: flex;
-    margin-right: 100px;
+.UI-part{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
 }
-
-.right-menu{
+.Found-logo{
+    border: 1px solid black;
+    position: absolute;
+    display: block;
+    left: 10%;
+    right: 50%;
+    top: 300px;
     text-align: center;
-    font-size: 30px;
-    color: yellow;
-    padding-top: 10px;
-    padding-right: 50px;
-    display: flex;
+}
+.Lost-logo{
+    border: 1px solid black;
+    position: absolute;
+    display: block;
+    left: 50%;
+    right: 10%;
+    top: 300px;
+    text-align: center;
 }
