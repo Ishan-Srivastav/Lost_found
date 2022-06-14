@@ -2,6 +2,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
+    z-index: 1000;
 }
 .IITH-logo{
     height: fit-content;
@@ -22,24 +23,36 @@
 
 .UI-part{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 50px;
     justify-content: space-between;
 }
 .Found-logo{
     border: 1px solid black;
+    background-color: lightblue;
     position: absolute;
     display: block;
     left: 10%;
     right: 50%;
     top: 300px;
     text-align: center;
+    z-index: 10;
+    height: 100px;
+    width: 400px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .Lost-logo{
     border: 1px solid black;
+    background-color: lightpink;
     position: absolute;
     display: block;
     left: 50%;
     right: 10%;
     top: 300px;
     text-align: center;
+    z-index: 10;
+    height: 100px;
+    width: 400px;
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
