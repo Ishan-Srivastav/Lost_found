@@ -1,58 +1,61 @@
-.Logo-part{
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    z-index: 1000;
-}
-.IITH-logo{
-    height: fit-content;
-    width: fit-content;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid black;
-}
-.page-logo{
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    margin-top: 0;
-    height: 100px;
-}
-
-.UI-part{
+.Head-container{
     display: grid;
-    gap: 50px;
-    justify-content: space-between;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 300px repeat(2,1fr);
 }
-.Found-logo{
-    border: 1px solid black;
-    background-color: lightblue;
-    position: absolute;
-    display: block;
-    left: 10%;
-    right: 50%;
-    top: 300px;
+.img4{
+    grid-column-start: 2;
+    grid-row-start: 1;
     text-align: center;
-    z-index: 10;
-    height: 100px;
-    width: 400px;
+}
+.img2{
+    grid-column-start: 1;
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 90px 1fr;
+}
+.img3{
+    grid-column-start: 3;
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 90px 1fr;
+}
+.add_sign{
+    background-color: rgb(251, 77, 77);
+    color: white;
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 50px;
+    display: inline-block;
+}
+.add_sign:hover{
+    cursor: pointer;
+}
+.add_sign:active{
+    background-color: rgb(178, 47, 47);
+    color: white;
+}
+.latest-post{
+    height: 800px;
     grid-column-start: 1;
     grid-column-end: 3;
-}
-.Lost-logo{
+    grid-row-end: 1fr;
+    background-color: aqua;
     border: 1px solid black;
-    background-color: lightpink;
-    position: absolute;
-    display: block;
-    left: 50%;
-    right: 10%;
-    top: 300px;
-    text-align: center;
-    z-index: 10;
-    height: 100px;
-    width: 400px;
-    grid-column-start: 3;
-    grid-column-end: 5;
+}
+.nav-panel{
+    width: auto;
+    height: fit-content;
+    background-color: pink;
+    border: 1px solid black;
+    border-radius: 2px;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
