@@ -20,68 +20,49 @@
             <button class="add_sign">
                 +
             </button>
+            {% if lastest_lost_list %}
             <div class="latest-post">
-                <div class="lost-found-item-container">
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
-                        </div>
-                    </div>
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
-                        </div>
-                    </div>
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
+                {% for lost in latest_lost_list %}
+                    <div class="lost-found-item-container">
+                        <div class="lost-found-item">
+                            <div class="item-img">
+                                {{ lost.picture }}
+                            </div>
+                            <div class="item-description">
+                                <p>{{ lost.name }}</p><br>
+                                <p>{{ lost.description }}</p><br>
+                                <p>{{ lost.contact }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-        </div>
+            {% endif %}
         <div class="img3">
             <img src="{% static 'images/Lost_logo-removebg-preview.png' %}">
             <button class="add_sign">
                 +
             </button>
+            {% if lastest_lost_list %}
             <div class="latest-post">
-                <div class="lost-found-item-container">
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
-                        </div>
-                    </div>
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
-                        </div>
-                    </div>
-                    <div class="lost-found-item">
-                        <div class="item-img">
-                            <img src="{% static 'images/ID_placeholder_logo-removebg-preview.png' %}">
-                        </div>
-                        <div class="item-description">
-                            <p>Desc.</p>
+                {% for lost in latest_lost_list %}
+                    <div class="lost-found-item-container">
+                        <div class="lost-found-item">
+                            <div class="item-img">
+                                {{ lost.picture }}
+                            </div>
+                            <div class="item-description">
+                                <p>{{ lost.name }}</p><br>
+                                <p>{{ lost.description }}</p><br>
+                                <p>{{ lost.contact }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
         <div class="img4">
             <img src="{% static 'images/logo-removebg-preview.png' %}">
