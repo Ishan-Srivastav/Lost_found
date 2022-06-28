@@ -1,5 +1,5 @@
-from django import forms
 from django.db import models
+from django.forms import ModelForm  
 from django.utils import timezone
 import datetime
 
@@ -29,3 +29,7 @@ class Lost(models.Model):
         return self.name
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class LostForm(ModelForm):
+    class Meta:
+        model = Lost
+        fields = '__all__'
