@@ -24,8 +24,11 @@ class Lost(models.Model):
     name = models.CharField(max_length= 15, default='None')
     description = models.CharField(max_length= 200, default= 'None')
     contact = models.CharField(max_length= 100, default='None')
+    pub_date = models.DateTimeField('date published')
     def __str__(self):
         return self.name
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 class LostForm(forms.ModelForm):
     class Meta:

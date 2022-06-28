@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'LandF'
 urlpatterns = [
-    path('',views.index,name ="index")
+    path('', views.IndexView.as_view(), name='index'),
+    path('Lost_Form/',views.DetailView.as_view(), name='form')
 ]
