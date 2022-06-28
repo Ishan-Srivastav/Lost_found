@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import generic
 from django.contrib import messages
-from .models import LostForm
+from .models import LostForm, Lost
 # Create your views here.
 
 class IndexView(generic.ListView):
