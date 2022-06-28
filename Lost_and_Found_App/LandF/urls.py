@@ -4,5 +4,5 @@ from . import views
 app_name = 'LandF'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('Lost_Form/',views.DetailView.as_view(), name='form')
+    path('<int:pk>/Lost_Form/',views.DetailView.as_view(), name='form')
 ]
