@@ -7,14 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-    <title>Trial</title>
+    <title>Lost and Found</title>
 </head>
 <body>
-    <li><a href = "{% url 'LandF:form' %}">Lost Post</a></li>
-    <div class="Head-container">
-        <div class="img1">
-            <img src="{% static 'images/IITH_logo-removebg-preview.png' %}">
+    
+<!-- website header -->
+    
+    <header id="main-header">
+        <div class="website-home">
+        
+                
+                    <a href="#">
+                        <img src="{% static 'images/IITH_logo-removebg-preview.png' %}"><h1 class="main-tital">Lost And Found Requests</h1>
+                    </a>
+                
+            
         </div>
+    </header>
+    
+    
+    
+<!--Lost post Section at the top of navigation bar -->
+    <nav id="navbar">
+        <div>
+            <ul>
+                <li><a href = "{% url 'LandF:form' %}">Lost Post</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- navigation bar end -->
+
+
+
+
+    <div class="Head-container container">
+        <!-- <div class="img1">
+            <img src="{% static 'images/IITH_logo-removebg-preview.png' %}">
+        </div> -->
         <div class="img2">
             <img src="{% static 'images/Found_logo-removebg-preview.png' %}">
             <button class="add_sign">
@@ -64,12 +94,12 @@
             </div>
             {% endif %}
         </div>
-        <div class="img4">
+        <div class="img4 container">
             <img src="{% static 'images/logo-removebg-preview.png' %}">
         </div>
         <div class="nav-panel-container">
             <div class="nav-panel">
-                <h1>How to Use</h1>
+                <h2>How to Use</h2>
                 <ul>
                     <li>If you find an item please first look in the Lost items box using the search feature on the Lost item box if the item is not reported as lost please post a Found item report </li>
                     <li>When you find an Item you can post the found item in the found list on the left using the Big Red + button</li>
