@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Trial</title>
+</head>
+<body>
+    <li><a href = "{% url 'LandF:form' %}">Lost Post</a></li>
+    <div class="Head-container">
+        <div class="img1">
+            <img src="{% static 'images/IITH_logo-removebg-preview.png' %}">
+        </div>
+        <div class="img2">
+            <img src="{% static 'images/Found_logo-removebg-preview.png' %}">
+            <button class="add_sign">
+                +
+            </button>
+            {% if lastest_lost_list %}
+            <div class="latest-post">
+                {% for lost in latest_lost_list %}
+                    <div class="lost-found-item-container">
+                        <div class="lost-found-item">
+                            <div class="item-img">
+                                {{ lost.picture }}
+                            </div>
+                            <div class="item-description">
+                                <p>{{ lost.name }}</p><br>
+                                <p>{{ lost.description }}</p><br>
+                                <p>{{ lost.contact }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        <div class="img3">
+            <img src="{% static 'images/Lost_logo-removebg-preview.png' %}">
+            <button class="add_sign">
+                +
+            </button>
+            {% if lastest_lost_list %}
+            <div class="latest-post">
+                {% for lost in latest_lost_list %}
+                    <div class="lost-found-item-container">
+                        <div class="lost-found-item">
+                            <div class="item-img">
+                                {{ lost.picture }}
+                            </div>
+                            <div class="item-description">
+                                <p>{{ lost.name }}</p><br>
+                                <p>{{ lost.description }}</p><br>
+                                <p>{{ lost.contact }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="img4">
+            <img src="{% static 'images/logo-removebg-preview.png' %}">
+        </div>
+        <div class="nav-panel-container">
+            <div class="nav-panel">
+                <h1>How to Use</h1>
+                <ul>
+                    <li>If you find an item please first look in the Lost items box using the search feature on the Lost item box if the item is not reported as lost please post a Found item report </li>
+                    <li>When you find an Item you can post the found item in the found list on the left using the Big Red + button</li>
+                    <li>To find an item that you have lost use the Search button on the top right of the Lost items box</li>
+                    <li>We first recommend checking the found items list if you have lost an item using the search bar on the top right of Found items box before posting Lost item request</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
